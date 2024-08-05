@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table with Edit and Delete Buttons</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -36,6 +38,12 @@
             @endforeach
         </tbody>
     </table>
+    <script type="text/javascript">
+        $('#search').on('keyup',function(){
+            $value = $(this).val();
+            alert($value);
+        })
+    </script>
 </body>
 
 </html>
