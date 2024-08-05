@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="search">
+            <input type="search" name="search" id="search" placeholder="Search Something Here" class="form-control">
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
@@ -22,9 +27,9 @@
         <tbody>
             @foreach ($contactdata as $cdata)
                 <tr>
-                    <td>{{$cdata->name}}</td>
-                    <td>{{$cdata->email}}</td>
-                    <td>{{$cdata->phone_number}}</td>
+                    <td>{{ $cdata->name }}</td>
+                    <td>{{ $cdata->email }}</td>
+                    <td>{{ $cdata->phone_number }}</td>
                     <td><button class="edit-btn">Edit</button></td>
                     <td><button class="delete-btn">Delete</button></td>
                 </tr>
@@ -32,4 +37,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
