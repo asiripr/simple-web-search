@@ -25,7 +25,7 @@ class HomeController extends Controller
                 <td>'.'<button class="delete-btn">Delete</button>'.'</td>                
             <tr>
             ';
-            return response($output);
         }
+        return response($output);
     }
 }
