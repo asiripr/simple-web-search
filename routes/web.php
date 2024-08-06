@@ -8,4 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/search',[HomeController::class,'search'])->name('search');
+Route::get('/searchfeature',[HomeController::class,'searchfeature'])->name('searchfeature');
 
