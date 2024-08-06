@@ -21,6 +21,8 @@ class HomeController extends Controller
                 <td>'.$human->name.'</td>
                 <td>'.$human->email.'</td>
                 <td>'.$human->phone_number.'</td>
+                <td>'.'<button class="edit-btn">Edit</button>'.'</td>                
+                <td>'.'<button class="delete-btn">Delete</button>'.'</td>                
             <tr>
             ';
             return response($output);
