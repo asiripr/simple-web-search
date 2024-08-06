@@ -11,4 +11,17 @@ class HomeController extends Controller
         $contactdata = Contact::all();
         return view('search',compact('contactdata'));
     }
+    public function searchfeature(Request $request){
+        $output = '';
+        $employee = Contact::where('name','Like','%'.$request->searchfeature.'%')->orWhere('email','Like','%'.$request->searchfeature.'%')->get();
+
+        foreach ($employee as $human) {
+            $output.= 
+            '<tr>
+                <td>'.$human->name.'</td>
+            <tr>
+            ';
+            return response($output);
+        }
+    }
 }
