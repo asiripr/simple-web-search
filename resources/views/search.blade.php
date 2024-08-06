@@ -26,6 +26,7 @@
                 <th>Delete</th>
             </tr>
         </thead>
+        <tbody class="alldata">
             @foreach ($contactdata as $cdata)
                 <tr>
                     <td>{{ $cdata->name }}</td>
@@ -35,12 +36,20 @@
                     <td><button class="delete-btn">Delete</button></td>
                 </tr>
             @endforeach
-        <tbody id="Content">
+        </tbody>
+        <tbody id="Content" class="searchdata">
         </tbody>
     </table>
     <script type="text/javascript">
         $('#search').on('keyup',function(){
             $value = $(this).val();
+            if ($value) {
+                $('.alldata').hide();
+                $('.searchdata').show();                
+            }else{
+                $('.alldata').show();
+                $('.searchdata').hide(); 
+            }
             
             $.ajax({
                 type:'get',

@@ -19,6 +19,8 @@ class HomeController extends Controller
             $output.= 
             '<tr>
                 <td>'.$human->name.'</td>
+                <td>'.$human->email.'</td>
+                <td>'.$human->phone_number.'</td>
             <tr>
             ';
             return response($output);
